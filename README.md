@@ -22,8 +22,8 @@ Imagine que você tem uma lista de itens, como números, strings ou até mesmo o
 Código exemplo de Array: 
 ```
 let myArray = [1, 'Bob', 'Steve', 10];
-
 ```
+
 Neste exemplo, **myArray** é um array que contém quatro elementos:
 
 1. O número **1**
@@ -39,6 +39,26 @@ Você pode acessar cada elemento do array usando um índice, que começa em **0*
 Arrays também permitem que você faça operações como adicionar, remover ou modificar elementos, e iterar sobre eles com facilidade.
 
 Os arrays são uma parte essencial da programação em JavaScript, oferecendo flexibilidade e eficiência na manipulação de listas de dados.
+
+### Método Array.prototype.sort()
+O método sort() é uma ferramenta poderosa em JavaScript para ordenar os elementos de um array. Ele organiza os elementos de acordo com a pontuação de código Unicode por padrão, mas pode ser customizado com uma função de comparação para atender a necessidades específicas de ordenação.
+
+Código
+```
+arr.sort([funcaoDeComparacao])
+```
+
+* **arr**: O array a ser ordenado.
+* **funcaoDeComparacao:** Uma função que define a ordem dos elementos. Se omitida, a ordenação será feita com base na conversão dos elementos para strings e a comparação de suas pontuações Unicode.
+  
+#### Parâmetros
+**funcaoDeComparacao:**
+**Recebe dois parâmetros, primeiroElemento e segundoElemento, e deve retornar:** Um valor negativo se o primeiro elemento deve vir antes do segundo.
+   * Zero se ambos elementos são iguais em termos de ordenação.
+   * Um valor positivo se o primeiro elemento deve vir após o segundo.
+     
+**Valor de Retorno**
+   * O array ordenado. Importante notar que o método sort() modifica o array original e não retorna uma cópia.
 
 
 ### :family: Integrantes do Projeto
