@@ -1,0 +1,19 @@
+article {
+    border: 3px dashed black;
+    margin: 20px;
+    padding: 20px;
+    background-color: bisque;
+}
+
+#map, #reduce {
+    border: 3px dashed black;
+    margin: 20px;
+    padding: 20px;
+}
+
+#map {
+    background-color: rgb(159, 233, 149);
+}
+#reduce {
+    background-color: rgb(164, 149, 233);
+}
