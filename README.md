@@ -215,7 +215,8 @@ array.reduce(callback[, valorInicial])
 **valorInicial (opcional):** Se fornecido, o acumulador inicia com este valor. Caso contrário, inicia com o primeiro elemento do array.
   
 **Exemplos**
-**1.Encontrar o Produto de Todos os Valores em um Array.**
+
+**1. Encontrar o Produto de Todos os Valores em um Array.**
 Se você quiser calcular o produto de todos os números em um array, você pode usar reduce() da seguinte maneira:
 ```
 const numeros = [1, 2, 3, 4];
