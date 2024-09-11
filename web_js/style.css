@@ -2,10 +2,10 @@ article {
     border: 3px dashed black;
     margin: 20px;
     padding: 20px;
-    background-color: bisque;
+    background-color: rgb(242, 213, 178);
 }
 
-#map, #reduce {
+#map, #reduce, #filter, #spread {
     border: 3px dashed black;
     margin: 20px;
     padding: 20px;
@@ -15,5 +15,11 @@ article {
     background-color: rgb(159, 233, 149);
 }
 #reduce {
-    background-color: rgb(164, 149, 233);
+    background-color: rgb(202, 109, 216);
+}
+#filter {
+    background-color: rgb(231, 231, 104);
+}
+#spread {
+    background-color: rgb(132, 156, 233);
 }
