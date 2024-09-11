@@ -441,7 +441,9 @@ O uso de arrays em JavaScript é essencial para o gerenciamento e manipulação 
 
 Ao final, ficou evidente que o domínio desses métodos e técnicas é crucial para uma manipulação eficaz e sofisticada de dados em JavaScript. Cada um desses métodos fornece funcionalidades únicas que, quando aplicadas corretamente, podem aprimorar significativamente a clareza e o desempenho do código. A prática desses conceitos é essencial para desenvolvedores que buscam excelência na programação JavaScript, permitindo-lhes criar aplicações mais robustas e eficientes.
 
+
 ### :family: Integrantes do Projeto
+
 
 | ![Yasmin Mendes](https://avatars.githubusercontent.com/u/178385852?v=4) <br> <sub> Yasmin Mendes </sub> | ![Bruna Zakaib](https://avatars.githubusercontent.com/u/130071892?v=4) <br> <sub> Bruna Zakaib </sub> | ![Isabela Realli](https://avatars.githubusercontent.com/u/180230011?v=4) <br> <sub> Isabela Realli </sub> | ![Beatriz Soares](https://avatars.githubusercontent.com/u/180229545?v=4) <br> <sub> Beatriz Soares </sub> |
 | --- | --- | --- | --- |
