@@ -1,5 +1,4 @@
-# Array
-
+# Array em JavaScript
 <p align="center"> Tópicos</p>
 <p align="center">
  <a>Arrays no JavaScript</a> •
