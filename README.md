@@ -420,9 +420,12 @@ var obj2 = { foo: "baz", y: 13 };
 var mergedObj = { ...obj1, ...obj2 };
 console.log(mergedObj); // Saída: { foo: "baz", x: 42, y: 13 }
 ```
-Explicação: { ...obj1, ...obj2 } combina obj1 e obj2. Se houver propriedades com o mesmo nome, as propriedades de obj2 sobrescrevem as de obj1.
+**Explicação:** 
+{ ...obj1, ...obj2 } combina obj1 e obj2. Se houver propriedades com o mesmo nome, as propriedades de obj2 sobrescrevem as de obj1.
 
 - Esses exemplos mostram como a sintaxe de espalhamento pode simplificar operações comuns em JavaScript, como manipulação de arrays e objetos. A sintaxe de espalhamento melhora a legibilidade e reduz a complexidade do código.
+- 
+
 
 ### :family: Integrantes do Projeto
 
