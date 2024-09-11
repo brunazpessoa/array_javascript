@@ -255,7 +255,131 @@ console.log(soma); // 15
 
 O reduce() é extremamente flexível e pode ser usado para muitas operações em arrays, desde simples somas até operações mais complexas como a manipulação de promessas e a remoção de duplicatas. A capacidade de realizar essas operações em uma única passagem pelo array torna o reduce() uma ferramenta valiosa para otimização de código e manipulação de dados.
 
+### Método filter
+
 ### :family: Integrantes do Projeto
+**Descrição:** O método filter() cria um novo array contendo todos os elementos que atendem a um critério definido por uma função callback fornecida.
+
+**Código:**
+```
+var newArray = arr.filter(callback[, thisArg])
+```
+
+**Parâmetros:**
+
+- **callback:** Função que testa cada elemento do array. Recebe três argumentos:
+- **element:** O elemento atual sendo processado no array.
+- **index:** O índice do elemento atual no array.
+- **array:** O array sobre o qual o filter() foi chamado.
+- **thisArg (Opcional):** Valor a ser usado como this quando a função callback é chamada.
+- **Valor de Retorno:** Um novo array com todos os elementos que passaram no teste definido pelo callback.
+
+**Descrição detalhada:**
+- filter() chama a função callback para cada elemento do array e inclui no novo array apenas aqueles para os quais o callback retorna true.
+- O método não altera o array original.
+- Elementos adicionados ao array após o início do filter() não são considerados.
+- Elementos removidos ou alterados após o início do filter() não afetam o resultado
+
+#### Exemplos:
+**Filtrando valores menores que 10:**
+```
+function isBigEnough(value) {
+  return value >= 10;
+}
+var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// filtered é [12, 130, 44]
+```
+
+**Filtrando entradas inválidas para JSON:**
+```
+var arr = [
+  { id: 15 },
+  { id: -1 },
+  { id: 0 },
+  { id: 3 },
+  { id: 12.2 },
+  {},
+  { id: null },
+  { id: NaN },
+  { id: "undefined" },
+];
+
+var invalidEntries = 0;
+
+function filterByID(obj) {
+  if ("id" in obj && typeof obj.id === "number" && !isNaN(obj.id)) {
+    return true;
+  } else {
+    invalidEntries++;
+    return false;
+  }
+}
+
+var arrByID = arr.filter(filterByID);
+
+console.log("Filtered Array\n", arrByID);
+// [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
+
+console.log("Number of Invalid Entries = ", invalidEntries);
+// Number of Invalid Entries = 4
+
+```
+
+**Procurando em um array:**
+```
+var fruits = ["apple", "banana", "grapes", "mango", "orange"];
+
+function filterItems(query) {
+  return fruits.filter(function (el) {
+    return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  });
+}
+
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
+```
+
+**Polyfill:** Para garantir compatibilidade com versões mais antigas do JavaScript que não suportam filter(), você pode usar o seguinte código para adicionar o método filter() ao prototype de Array:
+
+```
+if (!Array.prototype.filter) {
+  Array.prototype.filter = function (fun /*, thisArg*/) {
+    "use strict";
+
+    if (this === void 0 || this === null) {
+      throw new TypeError();
+    }
+
+    var t = Object(this);
+    var len = t.length >>> 0;
+    if (typeof fun !== "function") {
+      throw new TypeError();
+    }
+
+    var res = [];
+    var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+    for (var i = 0; i < len; i++) {
+      if (i in t) {
+        var val = t[i];
+        if (fun.call(thisArg, val, i, t)) {
+          res.push(val);
+        }
+      }
+    }
+
+    return res;
+  };
+}
+
+```
+
+
+
+
+
+
+
+
 
 
 | ![Yasmin Mendes](https://avatars.githubusercontent.com/u/178385852?v=4) <br> <sub> Yasmin Mendes </sub> | ![Bruna Zakaib](https://avatars.githubusercontent.com/u/130071892?v=4) <br> <sub> Bruna Zakaib </sub> | ![Isabela Realli](https://avatars.githubusercontent.com/u/180230011?v=4) <br> <sub> Isabela Realli </sub> | ![Beatriz Soares](https://avatars.githubusercontent.com/u/180229545?v=4) <br> <sub> Beatriz Soares </sub> |
