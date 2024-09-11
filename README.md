@@ -257,7 +257,6 @@ O reduce() é extremamente flexível e pode ser usado para muitas operações em
 
 ### Método filter
 
-### :family: Integrantes do Projeto
 **Descrição:** O método filter() cria um novo array contendo todos os elementos que atendem a um critério definido por uma função callback fornecida.
 
 **Código:**
@@ -373,14 +372,59 @@ if (!Array.prototype.filter) {
 
 ```
 
+### Conceito de Espalhamento (spread)
 
+A sintaxe de espalhamento permite expandir elementos de um iterável (como arrays e strings) ou propriedades de objetos em um novo contexto. Isso facilita operações como criar cópias, concatenar arrays e objetos, e passar argumentos para funções.
 
+**1. Espalhamento em Chamadas de Funções**
+Objetivo: Passar elementos de um array como argumentos para uma função.
 
+**Exemplo:**
+```
+function myFunction(x, y, z) {
+  console.log(x, y, z);
+}
 
+var args = [0, 1, 2];
+myFunction(...args); // Saída: 0 1 2
 
+```
+**Explicação:** myFunction(...args) expande o array args em argumentos individuais (0, 1, 2), que são passados para myFunction.
 
+**2. Espalhamento em Arrays Literais**
+Objetivo: Criar um novo array combinando elementos de arrays existentes.
 
+**Exemplo:**
+```
+var parts = ["shoulders", "knees"];
+var lyrics = ["head", ...parts, "and", "toes"];
+console.log(lyrics); // Saída: ["head", "shoulders", "knees", "and", "toes"]
+```
+- [...parts] expande o array parts dentro do novo array lyrics, criando uma nova lista com todos os elementos.
 
+**3. Espalhamento em Objetos Literais**
+Objetivo: Copiar ou mesclar propriedades de objetos.
+
+**Exemplo de Cópia de Objeto:**
+```
+var obj1 = { foo: "bar", x: 42 };
+var clonedObj = { ...obj1 };
+console.log(clonedObj); // Saída: { foo: "bar", x: 42 }
+```
+- Explicação: { ...obj1 } cria um novo objeto que é uma cópia rasa de obj1.
+
+**Exemplo de Mesclagem de Objetos:**
+```
+var obj1 = { foo: "bar", x: 42 };
+var obj2 = { foo: "baz", y: 13 };
+var mergedObj = { ...obj1, ...obj2 };
+console.log(mergedObj); // Saída: { foo: "baz", x: 42, y: 13 }
+```
+Explicação: { ...obj1, ...obj2 } combina obj1 e obj2. Se houver propriedades com o mesmo nome, as propriedades de obj2 sobrescrevem as de obj1.
+
+- Esses exemplos mostram como a sintaxe de espalhamento pode simplificar operações comuns em JavaScript, como manipulação de arrays e objetos. A sintaxe de espalhamento melhora a legibilidade e reduz a complexidade do código.
+
+### :family: Integrantes do Projeto
 
 | ![Yasmin Mendes](https://avatars.githubusercontent.com/u/178385852?v=4) <br> <sub> Yasmin Mendes </sub> | ![Bruna Zakaib](https://avatars.githubusercontent.com/u/130071892?v=4) <br> <sub> Bruna Zakaib </sub> | ![Isabela Realli](https://avatars.githubusercontent.com/u/180230011?v=4) <br> <sub> Isabela Realli </sub> | ![Beatriz Soares](https://avatars.githubusercontent.com/u/180229545?v=4) <br> <sub> Beatriz Soares </sub> |
 | --- | --- | --- | --- |
